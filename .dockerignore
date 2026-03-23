@@ -1,0 +1,26 @@
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+
+# Oracle APEX
+*.log
+*.lst
+
+# Build
+dist
+target
+node_modules

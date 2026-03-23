@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  oracle-db:
+    image: container-registry.oracle.com/database/express:21.3.0-xe
+    container_name: oracle-apex-solution-db
+    environment:
+      - ORACLE_PWD=${ORACLE_PWD:-oracle}
+    ports:
+      - "1521:1521"
+      - "8080:8080"
+    volumes:
+      - oracle_data:/opt/oracle/oradata
+    restart: unless-stopped
+
+volumes:
+  oracle_data:
